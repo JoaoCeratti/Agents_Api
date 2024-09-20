@@ -3,7 +3,7 @@ class AgentsController < ApplicationController
 
   # GET /agents
   def index
-    @agents = Agent.all
+    @agents = Agent.all.sorted_by_name
 
     render json: @agents
   end
